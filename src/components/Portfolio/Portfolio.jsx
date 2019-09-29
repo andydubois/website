@@ -39,7 +39,8 @@ class Portfolio extends Component {
         <h1>THIS IS MY PORTFOLIO</h1>
         <p>Interesting text about myself.</p>
         <Grid container className={classes.root}>
-          <Grid item xs={6}>
+          <Grid xs={1}></Grid>
+          <Grid item xs={5}>
             Project #1
             <div className={classes.imageBox}>
               <img
@@ -49,12 +50,18 @@ class Portfolio extends Component {
               />
             </div>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={5}>
             Project #2
           </Grid>
-          <Grid item xs={6}>
+          <Grid xs={1}></Grid>
+          <Grid xs={1}></Grid>
+          <Grid item xs={5}>
             Project #3
           </Grid>
+          <Grid item xs={5}>
+            Project #4
+          </Grid>
+          <Grid xs={1}></Grid>
         </Grid>
       </div>
     );

@@ -27,7 +27,8 @@ const styles = theme => ({
   },
   profilePicture: {
     maxHeight: "100%",
-    maxWidth: "100%"
+    maxWidth: "100%",
+    borderRadius: "20px"
   }
 });
 
@@ -42,12 +43,12 @@ class Portfolio extends Component {
     return (
       <div>
         <Navigation page={"projects"} />
-        <h1>THIS IS MY PORTFOLIO</h1>
-        <p>Interesting text about myself.</p>
+        <h1>Projects</h1>
         <Grid container className={classes.root}>
           <Grid xs={1}></Grid>
           <Grid item xs={5}>
-            Project #1
+            <h2>Who's Playing Tonight?</h2>
+            <h6>Person to Person Concert Sharing App</h6>
             <div className={classes.imageBox}>
               <img
                 className={classes.profilePicture}
@@ -62,7 +63,8 @@ class Portfolio extends Component {
             </div>
           </Grid>
           <Grid item xs={5}>
-            Project #2
+            <h2>Movie Gallery</h2>
+            <h6>Static Movie Database Gallery</h6>
             <img
               className={classes.profilePicture}
               src={movieGallery}

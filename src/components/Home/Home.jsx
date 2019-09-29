@@ -24,6 +24,11 @@ const styles = theme => ({
   profilePicture: {
   height: "100%",
   width: "100%",
+  borderRadius: "40px"
+},
+box: {
+  backgroundColor: "rgba(128,128,128,.5)",
+  height: '100%'
 }
 });
 
@@ -37,9 +42,7 @@ class Home extends Component {
     const { spacing } = this.state;
     return (
       <div>
-        <Navigation page={'home'}/>
-        <h1>This is the Home page</h1>
-        <p>Interesting text about myself.</p>
+        <Navigation page={"home"} />
         <Grid container className={classes.root}>
           <Grid item xs={1}></Grid>
           <Grid item xs={5}>
@@ -51,14 +54,8 @@ class Home extends Component {
               />
             </div>
           </Grid>
-          <Grid item xs={5}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <Grid className={classes.box} item xs={5}>
+          <p>I am a full stack developer who specializes in React, Redux, Node, Express work.  I am always looking for a new way to hone my skills.</p>
           </Grid>
           <Grid item xs={1}></Grid>
         </Grid>

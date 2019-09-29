@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-image: url(../../img/code-html-digital-coding-web-programming-computer-2.jpg);
+  background-size: cover;
+  height: 100vh;
 }
 
 .App-logo {

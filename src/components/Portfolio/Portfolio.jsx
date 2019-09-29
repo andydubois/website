@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-import whosPlaying from "../../img/wpt.png";
+import whosPlaying from "../../img/wptHome.png";
+import whosPlaying2 from "../../img/wptEvent.png";
+import movieGallery from "../../img/movieGallery.png"
 import Navigation from "../Navigation/Navigation"
+
 
 //Material UI Components
 import { withStyles } from "@material-ui/core/styles";
@@ -38,7 +41,7 @@ class Portfolio extends Component {
     const { spacing } = this.state;
     return (
       <div>
-        <Navigation page={'projects'}/>
+        <Navigation page={"projects"} />
         <h1>THIS IS MY PORTFOLIO</h1>
         <p>Interesting text about myself.</p>
         <Grid container className={classes.root}>
@@ -51,20 +54,30 @@ class Portfolio extends Component {
                 src={whosPlaying}
                 alt='profile picture'
               />
+              <img
+                className={classes.profilePicture}
+                src={whosPlaying2}
+                alt='profile picture'
+              />
             </div>
           </Grid>
           <Grid item xs={5}>
             Project #2
+            <img
+              className={classes.profilePicture}
+              src={movieGallery}
+              alt='profile picture'
+            />
           </Grid>
           <Grid xs={1}></Grid>
           <Grid xs={1}></Grid>
-          <Grid item xs={5}>
+          {/* <Grid item xs={5}>
             Project #3
           </Grid>
           <Grid item xs={5}>
             Project #4
-          </Grid>
-          <Grid xs={1}></Grid>
+          </Grid> */}
+          {/* <Grid xs={1}></Grid> */}
         </Grid>
       </div>
     );

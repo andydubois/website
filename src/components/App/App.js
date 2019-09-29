@@ -11,12 +11,6 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>Andy's react website!</p>
-          {/* <NavBar /> */}
-        </header>
-        <Navigation />
         <Router>
           <Route exact path='/' component={Home} />
           <Route path='/portfolio' component={Portfolio} />

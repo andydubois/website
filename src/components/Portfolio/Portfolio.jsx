@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import profilePicture from "../../img/andy.jpg";
+import whosPlaying from "../../img/wpt.png";
+import Navigation from "../Navigation/Navigation"
 
 //Material UI Components
 import { withStyles } from "@material-ui/core/styles";
@@ -18,11 +19,12 @@ const styles = theme => ({
   },
   imageBox: {
     width: "300px",
-    height: "200px"
+    height: "300px",
+    margin: "auto"
   },
   profilePicture: {
-    height: "100%",
-    width: "100%"
+    maxHeight: "100%",
+    maxWidth: "100%"
   }
 });
 
@@ -36,6 +38,7 @@ class Portfolio extends Component {
     const { spacing } = this.state;
     return (
       <div>
+        <Navigation page={'projects'}/>
         <h1>THIS IS MY PORTFOLIO</h1>
         <p>Interesting text about myself.</p>
         <Grid container className={classes.root}>
@@ -45,7 +48,7 @@ class Portfolio extends Component {
             <div className={classes.imageBox}>
               <img
                 className={classes.profilePicture}
-                src={profilePicture}
+                src={whosPlaying}
                 alt='profile picture'
               />
             </div>

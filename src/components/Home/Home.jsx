@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import profilePicture from "../../img/andy.jpg";
+import Navigation from "../Navigation/Navigation"
 
 //Material UI Components
 import { withStyles } from "@material-ui/core/styles";
@@ -36,6 +37,7 @@ class Home extends Component {
     const { spacing } = this.state;
     return (
       <div>
+        <Navigation page={'home'}/>
         <h1>This is the Home page</h1>
         <p>Interesting text about myself.</p>
         <Grid container className={classes.root}>
@@ -58,8 +60,7 @@ class Home extends Component {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </Grid>
-          <Grid item xs={1}>
-          </Grid>
+          <Grid item xs={1}></Grid>
         </Grid>
       </div>
     );

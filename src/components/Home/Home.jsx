@@ -44,8 +44,8 @@ class Home extends Component {
       <div>
         <Navigation page={"home"} />
         <Grid container className={classes.root}>
-          <Grid item xs={1}></Grid>
-          <Grid item xs={5}>
+          <Grid item xs={3}></Grid>
+          <Grid item xs={3}>
             <div className={classes.imageBox}>
               <img
                 className={classes.profilePicture}
@@ -54,10 +54,13 @@ class Home extends Component {
               />
             </div>
           </Grid>
-          <Grid className={classes.box} item xs={5}>
-          <p>I am a full stack developer who specializes in React, Redux, Node, Express work.  I am always looking for a new way to hone my skills.</p>
+          <Grid item xs={3}>
+            <p>
+              I am a full stack developer who specializes in React, Redux, Node,
+              Express work. I am always looking for a new way to hone my skills.
+            </p>
           </Grid>
-          <Grid item xs={1}></Grid>
+          <Grid item xs={3}></Grid>
         </Grid>
       </div>
     );

@@ -6,7 +6,7 @@ class Navigation extends Component {
   render() {
     return (
       <Navbar bg='dark' variant='dark'>
-        <Navbar.Brand href='#/'>{" Andy DuBois"}</Navbar.Brand>
+        <Navbar.Brand className="nameHeader" href='#/'>{" Andy DuBois"}</Navbar.Brand>
         {this.props.page==='home' ? (
           <Nav.Link href='#/portfolio' onClick={this.goToProjectsPage}>
             Projects

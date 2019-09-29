@@ -6,8 +6,10 @@ class Navigation extends Component {
   render() {
     return (
       <Navbar bg='dark' variant='dark'>
-        <Navbar.Brand className="nameHeader" href='#/'>{" Andy DuBois"}</Navbar.Brand>
-        {this.props.page==='home' ? (
+        <Navbar.Brand className='nameHeader' href='#/'>
+          {" Andy DuBois"}
+        </Navbar.Brand>
+        {this.props.page === "home" ? (
           <Nav.Link href='#/portfolio' onClick={this.goToProjectsPage}>
             Projects
           </Nav.Link>
@@ -37,6 +39,7 @@ class Navigation extends Component {
             className='d-inline-block align-top'
           />
         </Navbar.Brand>
+        <small>Contact Info</small>
       </Navbar>
     );
   }

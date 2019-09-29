@@ -1,4 +1,11 @@
+@font-face {
+  font-family: "highway";
+  src: url(../../fonts/OptimusPrinceps.ttf);
+}
+
+
 .App {
+  font-family: "highway";
   text-align: center;
   background-color: #8b8b8b;
 background-color: #5a5a5a;

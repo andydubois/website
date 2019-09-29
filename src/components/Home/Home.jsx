@@ -28,7 +28,9 @@ const styles = theme => ({
 },
 box: {
   backgroundColor: "rgba(128,128,128,.5)",
-  height: '100%'
+  height: '100%',
+  borderRadius: '20px',
+  height: '200px'
 }
 });
 
@@ -54,7 +56,7 @@ class Home extends Component {
               />
             </div>
           </Grid>
-          <Grid item xs={3}>
+          <Grid className={classes.box}item xs={3}>
             <p>
               I am a full stack developer who specializes in React, Redux, Node,
               Express work. I am always looking for a new way to hone my skills.

@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import { HashRouter as Router, Route } from "react-router-dom";
 import './App.css';
+import Home from "../Home/Home";
+import Portfolio from "../Portfolio/Portfolio"
+import Navigation from "../Navigation/Navigation.jsx"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Andy's react website!
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div className='App'>
+        <header className='App-header'>
+          <img src={logo} className='App-logo' alt='logo' />
+          <p>Andy's react website!</p>
+          {/* <NavBar /> */}
         </header>
+        <Navigation />
+        <Router>
+          <Route exact path='/' component={Home} />
+          <Route path='/portfolio' component={Portfolio} />
+        </Router>
       </div>
     );
   }

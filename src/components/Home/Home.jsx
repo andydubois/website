@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import profilePicture from "../../img/andy.jpg";
-import Navigation from "../Navigation/Navigation"
+import Navigation from "../Navigation/Navigation";
 
 //Material UI Components
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
   root: {
@@ -18,26 +19,32 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2
   },
   imageBox: {
-    width: '300px',
-    height: '200px',
+    width: "300px",
+    height: "200px"
   },
   profilePicture: {
-  height: "100%",
-  width: "100%",
-  borderRadius: "40px"
-},
-box: {
-  backgroundColor: "rgba(128,128,128,.5)",
-  height: '100%',
-  borderRadius: '20px',
-  height: '200px'
-}
+    height: "100%",
+    width: "100%",
+    borderRadius: "50%"
+  },
+  box: {
+    backgroundColor: "rgba(128,128,128,.5)",
+    height: "100%",
+    borderRadius: "20px",
+    height: "200px",
+    paddingTop: "35px"
+  }
 });
 
 class Home extends Component {
   state = {
     spacing: "0"
   };
+
+  goToProjects = () => {
+    this.props.history.push("/portfolio");
+  };
+
   render() {
     //set styling for MUI grid
     const { classes } = this.props;
@@ -46,23 +53,30 @@ class Home extends Component {
       <div>
         <Navigation page={"home"} />
         <Grid container className={classes.root}>
-          <Grid item xs={3}></Grid>
-          <Grid item xs={3}>
+          <Grid item xs={1}></Grid>
+          <Grid item xs={5}>
             <div className={classes.imageBox}>
               <img
                 className={classes.profilePicture}
                 src={profilePicture}
                 alt='profile picture'
               />
+              <br />
+              <Button
+                variant='contained'
+                color='primary'
+                onClick={this.goToProjects}>
+                CLick to see my work
+              </Button>
             </div>
           </Grid>
-          <Grid className={classes.box}item xs={3}>
+          <Grid className={classes.box} item xs={4}>
             <p>
               I am a full stack developer who specializes in React, Redux, Node,
               Express work. I am always looking for a new way to hone my skills.
             </p>
           </Grid>
-          <Grid item xs={3}></Grid>
+          <Grid item xs={1}></Grid>
         </Grid>
       </div>
     );

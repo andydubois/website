@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import whosPlaying from "../../img/wptHome.png";
 import whosPlaying2 from "../../img/wptEvent.png";
-import movieGallery from "../../img/movieGallery.png"
-import Navigation from "../Navigation/Navigation"
-
+import movieGallery from "../../img/movieGallery.png";
+import Navigation from "../Navigation/Navigation";
 
 //Material UI Components
 import { withStyles } from "@material-ui/core/styles";
@@ -46,30 +45,37 @@ class Portfolio extends Component {
         <h1>Projects</h1>
         <Grid container className={classes.root}>
           <Grid xs={1}></Grid>
-          <Grid item xs={5}>
+          <Grid item sm={5} xs={12}>
             <h2>Who's Playing Tonight?</h2>
             <h6>Person to Person Concert Sharing App</h6>
             <div className={classes.imageBox}>
-              <img
-                className={classes.profilePicture}
-                src={whosPlaying}
-                alt='profile picture'
-              />
-              <img
-                className={classes.profilePicture}
-                src={whosPlaying2}
-                alt='profile picture'
-              />
+              <a
+                href='https://ancient-caverns-40986.herokuapp.com/#/home'
+                target='_blank'>
+                <img
+                  className={classes.profilePicture}
+                  src={whosPlaying}
+                  alt='profile picture'
+                />
+                <img
+                  className={classes.profilePicture}
+                  src={whosPlaying2}
+                  alt='profile picture'
+                />
+              </a>
             </div>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item sm={0} xs={0}></Grid>
+          <Grid item sm={5} xs={12}>
             <h2>Movie Gallery</h2>
             <h6>Static Movie Database Gallery</h6>
-            <img
-              className={classes.profilePicture}
-              src={movieGallery}
-              alt='profile picture'
-            />
+            <a href='https://enigmatic-shore-92024.herokuapp.com/#/' target="_blank">
+              <img
+                className={classes.profilePicture}
+                src={movieGallery}
+                alt='profile picture'
+              />
+            </a>
           </Grid>
           <Grid xs={1}></Grid>
           <Grid xs={1}></Grid>

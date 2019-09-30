@@ -20,7 +20,9 @@ const styles = theme => ({
   },
   imageBox: {
     width: "300px",
-    height: "200px"
+    height: "200px",
+    marginRight: "auto",
+    marginLeft: "auto"
   },
   profilePicture: {
     height: "100%",
@@ -32,6 +34,9 @@ const styles = theme => ({
     height: "100%",
     borderRadius: "20px",
     paddingTop: "35px"
+  },
+  workButton: {
+    paddingBottom: "40px"
   }
 });
 
@@ -53,8 +58,13 @@ class Home extends Component {
         <Navigation page={"home"} />
         <h1>Andy DuBois</h1>
         <Grid container className={classes.root}>
-          <Grid item xs={1}></Grid>
-          <Grid item xs={5}>
+          <Grid item sm={1}></Grid>
+          <Grid
+            className={classes.workButton}
+            item
+            sm={5}
+            xs={12}
+            justify={"flex-end"}>
             <div className={classes.imageBox}>
               <img
                 className={classes.profilePicture}
@@ -70,13 +80,15 @@ class Home extends Component {
               </Button>
             </div>
           </Grid>
-          <Grid className={classes.box} item xs={4}>
-            <p className="homeText">
-              Hey! I am a full stack software developer who studied at Prime Digital Academy.  I specialize in React, Redux, Node, and
-              Express. I am always looking for a new way to hone my skills. Feel free to take a look around!
+          <Grid className={classes.box} item sm={4} xs={12}>
+            <p className='homeText'>
+              Hey! I am a full stack software developer who studied at Prime
+              Digital Academy. I specialize in React, Redux, Node, and Express.
+              I am always looking for a new way to hone my skills. Feel free to
+              take a look around!
             </p>
           </Grid>
-          <Grid item xs={1}></Grid>
+          <Grid item sm={1}></Grid>
         </Grid>
       </div>
     );

@@ -5,9 +5,12 @@ class Navigation extends Component {
 
   render() {
     return (
-      <Navbar bg='dark' variant='dark' className="navBar">
+      <Navbar bg='dark' variant='dark'>
         {this.props.page === "home" ? (
-          <Nav.Link href='#/portfolio' onClick={this.goToProjectsPage}>
+          <Nav.Link
+            className='navBar'
+            href='#/portfolio'
+            onClick={this.goToProjectsPage}>
             Projects
           </Nav.Link>
         ) : (
@@ -24,6 +27,7 @@ class Navigation extends Component {
             height='40'
             className='d-inline-block align-top'
           />
+          <small>GitHub</small>
         </Navbar.Brand>
         <Navbar.Brand
           href='https://www.linkedin.com/in/andrewjdubois1/'
@@ -35,8 +39,8 @@ class Navigation extends Component {
             height='40'
             className='d-inline-block align-top'
           />
+          <small>LinkedIn</small>
         </Navbar.Brand>
-        <small>Contact Info</small>
       </Navbar>
     );
   }

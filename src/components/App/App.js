@@ -5,6 +5,7 @@ import './App.css';
 import Home from "../Home/Home";
 import Portfolio from "../Portfolio/Portfolio"
 import Navigation from "../Navigation/Navigation.jsx"
+import Footer from "../Footer/Footer"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
           <Route exact path='/' component={Home} />
           <Route path='/portfolio' component={Portfolio} />
         </Router>
+        <Footer />
       </div>
     );
   }

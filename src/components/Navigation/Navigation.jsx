@@ -5,10 +5,7 @@ class Navigation extends Component {
 
   render() {
     return (
-      <Navbar bg='dark' variant='dark'>
-        <Navbar.Brand className='nameHeader' href='#/'>
-          {" Andy DuBois"}
-        </Navbar.Brand>
+      <Navbar bg='dark' variant='dark' className="navBar">
         {this.props.page === "home" ? (
           <Nav.Link href='#/portfolio' onClick={this.goToProjectsPage}>
             Projects
@@ -23,8 +20,8 @@ class Navigation extends Component {
           <img
             alt=''
             src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg'
-            width='30'
-            height='30'
+            width='40'
+            height='40'
             className='d-inline-block align-top'
           />
         </Navbar.Brand>
@@ -34,8 +31,8 @@ class Navigation extends Component {
           <img
             alt=''
             src='https://upload.wikimedia.org/wikipedia/commons/6/6d/LinkedinBlack.png'
-            width='30'
-            height='30'
+            width='40'
+            height='40'
             className='d-inline-block align-top'
           />
         </Navbar.Brand>

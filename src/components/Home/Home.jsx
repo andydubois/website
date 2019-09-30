@@ -31,7 +31,6 @@ const styles = theme => ({
     backgroundColor: "rgba(128,128,128,.5)",
     height: "100%",
     borderRadius: "20px",
-    height: "200px",
     paddingTop: "35px"
   }
 });
@@ -52,6 +51,7 @@ class Home extends Component {
     return (
       <div>
         <Navigation page={"home"} />
+        <h1>Andy DuBois</h1>
         <Grid container className={classes.root}>
           <Grid item xs={1}></Grid>
           <Grid item xs={5}>
@@ -71,9 +71,9 @@ class Home extends Component {
             </div>
           </Grid>
           <Grid className={classes.box} item xs={4}>
-            <p>
-              I am a full stack developer who specializes in React, Redux, Node,
-              Express work. I am always looking for a new way to hone my skills.
+            <p className="homeText">
+              Hey! I am a full stack software developer who studied at Prime Digital Academy.  I specialize in React, Redux, Node, and
+              Express. I am always looking for a new way to hone my skills. Feel free to take a look around!
             </p>
           </Grid>
           <Grid item xs={1}></Grid>
